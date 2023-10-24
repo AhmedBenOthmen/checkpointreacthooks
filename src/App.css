@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.movie-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+}
+
+.movie-card img{
+  max-height: 300px;
+  max-width: 200px;
+  margin: 10px;
+}
