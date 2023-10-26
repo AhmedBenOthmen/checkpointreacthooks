@@ -1,5 +1,6 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard.js';
+import './MovieList.css'
 
 // MovieList component that maps the movies into the MovieCard component
 const MovieList = ({ movies }) => {
