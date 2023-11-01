@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const AddMovie = ({ AddMovie }) => {
+  // Initialize state to manage the input fields for a new movie
   const [newMovie, setNewMovie] = useState({
     title: '',
     description: '',
@@ -8,11 +9,13 @@ const AddMovie = ({ AddMovie }) => {
     rating: 0,
   });
 
+  // Handle input changes and update the new movie object
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewMovie({ ...newMovie, [name]: value });
   };
 
+  // Handle adding a new movie, calling the AddMovie function
   const handleAddMovie = () => {
     AddMovie(newMovie);
     // Clear the form after adding the movie
@@ -55,6 +58,7 @@ const AddMovie = ({ AddMovie }) => {
         value={newMovie.rating}
         onChange={handleInputChange}
       />
+      {/* Button to trigger the addition of the new movie */}
       <button onClick={handleAddMovie}>Add Movie</button>
     </div>
   );
